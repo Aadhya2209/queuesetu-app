@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>QueueSetu · Smarter hospital visits</title>
+<meta name="description" content="QueueSetu: register for the OPD, track your turn live, find your department, and get help fast. Built for government hospitals.">
+<meta name="theme-color" content="#0B5D44">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="QueueSetu">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230B5D44'/%3E%3Ccircle cx='15' cy='15' r='7.5' fill='none' stroke='white' stroke-width='3.4'/%3E%3Cpath d='M19.6 19.6 25 25' stroke='%2316A86A' stroke-width='3.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Noto+Sans+Devanagari:wght@400..700&display=swap">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#app">Skip to content</a>
+<header class="topbar">
+  <div class="wrap tb-in">
+    <a class="brand" href="#home" aria-label="QueueSetu home">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0B5D44"/><circle cx="15" cy="15" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="3.4"/><path d="M19.6 19.6 25 25" stroke="#16A86A" stroke-width="3.6" stroke-linecap="round"/></svg>
+      <span>QueueSetu</span>
+    </a>
+    <nav class="mainnav" id="mainnav" aria-label="Main">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#patient" data-nav="patient">Patient</a>
+      <a href="#staff" data-nav="staff">Staff</a>
+      <a href="#display" data-nav="display">Hall Display</a>
+      <a href="#admin" data-nav="admin">Dashboard</a>
+    </nav>
+    <div class="tb-right">
+      <div class="langsw" role="group" aria-label="Language / भाषा">
+        <button type="button" data-glang="en" lang="en">EN</button><button type="button" data-glang="hi" lang="hi">हिं</button><button type="button" data-glang="doi" lang="doi" title="डोगरी">डो</button>
+      </div>
+      <a class="btn go tb-cta" href="#register" data-cta>Get Your Token</a>
+      <button type="button" class="menubtn" id="menubtn" aria-expanded="false" aria-controls="mainnav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="app" tabindex="-1">
+  <div class="wrap skel" aria-busy="true" aria-label="Loading">
+    <div class="sk sk-h"></div><div class="sk sk-p"></div><div class="sk sk-p short"></div>
+    <div class="sk-grid"><div class="sk sk-card"></div><div class="sk sk-card"></div><div class="sk sk-card"></div></div>
+  </div>
+</main>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/vendor/qrcode.js"></script>
+<script src="/shared.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
